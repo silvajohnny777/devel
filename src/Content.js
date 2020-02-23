@@ -28,7 +28,7 @@ import React from 'react';
                         }
                     ],
                     boxSelected: '',
-                    presentation: 'Virtual LH has now many products for the virtual aviation world'
+                    presentation: 'Select one of the options above'
                         
                 }          
 
@@ -69,6 +69,20 @@ import React from 'react';
         
                                 <div className="actionBoxDescription">
                                     {box.description}
+                                </div>
+
+                                <div className="actionBoxFooter">
+
+                                    {this.state.boxSelected != box.id ? 
+                                    
+                                        '- Click to see info -'
+                                    
+                                    :
+                                    
+                                        '- Info displayed bellow -'
+                                    
+                                    }
+                                    
                                 </div>
         
                             </div>
