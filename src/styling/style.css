@@ -58,6 +58,14 @@
     justify-content: space-between;
 }
 
+.contentContainerColumn {
+    margin: 0% 20% 0% 20%;
+    margin-top: 3%;    
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
 .actionBox {
     cursor: pointer;
     height: 100%;
@@ -86,8 +94,30 @@
 }
 
 .actionBoxDescription {  
+    font-size: 24px;
     height: 60%;
     padding: 5% 5% 0% 5%;
     font-family: "LufthansaHeadWeb-Light", sans-serif;
     color: rgb(5, 22, 77);
+}
+
+.presentationText {
+    font-size: 20px;
+}
+
+.selectedTitle {
+    display: flex;
+    height: 30%;
+    font-family: "LufthansaHeadWeb-Light", sans-serif;
+    color: #FFAD00;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.selectedSubtitle {
+    display: flex;
+    font-family: "LufthansaHeadWeb-Light", sans-serif;
+    color: rgb(5, 22, 77);
+    font-size: 24px;
+    font-weight: bold;
 }
