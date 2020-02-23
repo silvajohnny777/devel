@@ -4,7 +4,8 @@ import Cover from './Cover'
 import PreContent from './PreContent'
 import Content from './Content'
 
-import './styling/style.css'
+// import './styling/style.css'
+import './styling/style.scss'
 
 function App() {
   return (

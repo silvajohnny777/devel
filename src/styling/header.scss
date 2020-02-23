@@ -1,0 +1,14 @@
+.header {
+    height: 100px;
+    .headerContent {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 30px;
+        margin: 0% 20% 0% 20%;
+        height: 100%;
+        color: rgb(5, 22, 77);
+        font-weight: bold;    
+        font-family: $font-lufthansa, $font-padrao;
+    }
+}
