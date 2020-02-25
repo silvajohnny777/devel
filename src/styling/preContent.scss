@@ -8,4 +8,10 @@
     padding: 0 10px 0 10px;
     font-family: $font-lufthansa, $font-padrao;
     font-weight: bold;
+    @media screen and (max-width: 767px) {
+        margin: 0;
+        padding: 0;
+        text-indent: .6rem;
+        justify-content: center;
+    }
 }

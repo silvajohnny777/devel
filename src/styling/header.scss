@@ -11,4 +11,12 @@
         font-weight: bold;    
         font-family: $font-lufthansa, $font-padrao;
     }
+    @media screen and (max-width: 767px) {
+        height: 70px;
+        .headerContent {
+            margin: 0;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+    }
 }

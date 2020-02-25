@@ -60,8 +60,8 @@ import React from 'react';
 
                     {this.state.box.map((box) => {
                         return (
-
-                            <div className="actionBox" style={{marginTop: this.state.boxSelected === box.id ? '-2%' : '', borderTop: this.state.boxSelected === box.id ? '5px solid rgb(5, 22, 77)' : '', borderRadius: this.state.boxSelected === box.id ? '5px' : ''}} key={box.id} onClick={() => this.selecionaBox(box.id)}>
+                            <>
+                                <div className="actionBox"style={{marginTop: this.state.boxSelected === box.id ? '-2%' : '', borderTop: this.state.boxSelected === box.id ? '5px solid rgb(5, 22, 77)' : '', borderRadius: this.state.boxSelected === box.id ? '5px' : ''}} key={box.id} onClick={() => this.selecionaBox(box.id)}>
         
                                 <div className="actionBoxTitle">
                                     {box.title}
@@ -84,49 +84,77 @@ import React from 'react';
                                     }
                                     
                                 </div>
+                                {/* mobile */}
+                                    {
+
+                                        this.state.boxSelected == box.id? 
+
+                                            <div className="contentContainerColumn mob">
+
+                                                <div className="selectedTitle">
+
+                                                    {this.state.box[this.state.boxSelected-1].description}:
+
+                                                </div>
+
+                                                <div className="selectedSubtitle">
+
+                                                    {this.state.box[this.state.boxSelected-1].longerDescription}
+
+                                                </div>
+
+                                            </div>                    
+                                            
+
+                                        : 
+                                        <>
+                                            <div className="contentContainer mob">
+                                                <div className="presentationText">
+                                                    {this.state.presentation}
+                                                </div>
+                                            </div>
+                                        </>
+                                        }
         
                             </div>
 
+                           
+                            </>
                         )
                     })}
-
                 </div>
+                    {/* desktop */}
+                    {
 
-                {
+                        this.state.boxSelected ? 
 
-                    this.state.boxSelected ? 
+                            <div className="contentContainerColumn desk">
 
-                        <div className="contentContainerColumn">
-        
-                            <div className="selectedTitle">
+                                <div className="selectedTitle">
 
-                                {this.state.box[this.state.boxSelected-1].description}:
-        
+                                    {this.state.box[this.state.boxSelected-1].description}:
+
+                                </div>
+
+                                <div className="selectedSubtitle">
+
+                                    {this.state.box[this.state.boxSelected-1].longerDescription}
+
+                                </div>
+
+                            </div>                    
+                            
+
+                        : 
+                        <>
+                            <div className="contentContainer desk">
+                                <div className="presentationText">
+                                    {this.state.presentation}
+                                </div>
                             </div>
-        
-                            <div className="selectedSubtitle">
-
-                                {this.state.box[this.state.boxSelected-1].longerDescription}
-
-                            </div>
-        
-                        </div>                    
-                         
-                    
-                    : 
-
-                        <div className="contentContainer">
-        
-                            <div className="presentationText">
-        
-                                {this.state.presentation}
-        
-                            </div>
-        
-                        </div>
-
-                }
-
+                        </>
+                    }
+    
                 </>
 
             )

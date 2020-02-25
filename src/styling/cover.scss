@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
     .coverText {
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: flex-end;
         margin: 0% 20% 0% 20%;
         height: 100%;
@@ -14,5 +14,16 @@
         color: rgb(5, 22, 77);
         font-weight: bold;    
         font-family: $font-lufthansa, $font-padrao;
+    }
+    @media screen and (max-width: 767px) {
+        height: 186px;
+        background-size: cover;
+        .coverText {
+            margin: 0;
+            font-size:1.5rem;
+            justify-content: initial;
+            text-indent: .4rem;
+            text-align: center;
+        }
     }
 }
